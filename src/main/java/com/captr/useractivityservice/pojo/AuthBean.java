@@ -12,5 +12,5 @@ import org.springframework.web.context.annotation.RequestScope;
 @Data
 public class AuthBean {
     private String principal;
-    private Long userId;
+
 }

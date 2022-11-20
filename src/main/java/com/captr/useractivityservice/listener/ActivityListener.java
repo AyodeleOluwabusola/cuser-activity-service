@@ -29,7 +29,7 @@ public class ActivityListener {
         CtActivityLog ctActivityLog = new CtActivityLog();
         ctActivityLog.setActivityType(activityLog.getActivityType());
         ctActivityLog.setDesc(activityLog.getDescription());
-        ctActivityLog.setUserFk(activityLog.getUserId());
+        ctActivityLog.setUserEmail(activityLog.getEmailAddress());
         ctActivityLog.setActivityTime(StringUtils.isNotBlank(activityLog.getRequestTime()) ? LocalDateTime.parse(activityLog.getRequestTime(), DATE_TIME_FORMATTER): null );
 
         iActivityLogRepository.save(ctActivityLog);

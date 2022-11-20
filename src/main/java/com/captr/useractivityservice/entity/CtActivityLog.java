@@ -27,7 +27,6 @@ public class CtActivityLog extends BaseEntity {
     @Column(name= "ACT_TIMESTAMP")
     private LocalDateTime activityTime;
 
-    @Column(name = "USER_FK")
-    private Long userFk;
-
+    @Column(name = "USER_EMAIL")
+    private String userEmail;
 }

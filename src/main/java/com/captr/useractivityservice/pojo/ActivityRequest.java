@@ -9,5 +9,5 @@ import lombok.Data;
 public class ActivityRequest {
     private String activityType;
     private int pageIndex;
-    private int pageSize;
+    private int pageSize = 5;
 }
