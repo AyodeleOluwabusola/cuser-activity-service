@@ -15,9 +15,9 @@ import org.springframework.stereotype.Component;
 @Setter
 public class AppProperties {
 
-    private String queueName = "email_sender_queue";
-    private String exchangeName = "exchange.email_sender_exchange";;
-    private String routingKey = "routing.email_sender";
+    private String queueName = "activity_log_queue";
+    private String exchangeName = "exchange.activity_log_exchange";
+    private String routingKey = "routing.activty_log";
 
 
 }

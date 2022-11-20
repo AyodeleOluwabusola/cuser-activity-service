@@ -1,4 +1,4 @@
-package com.captr.useractivityservice;
+package com.captr.useractivityservice.config;
 
 import com.captr.useractivityservice.util.AppProperties;
 import org.springframework.amqp.core.AmqpTemplate;

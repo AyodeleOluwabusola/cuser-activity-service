@@ -2,7 +2,7 @@ package com.captr.useractivityservice.service;
 
 import com.captr.useractivityservice.pojo.ActivityRequest;
 import com.captr.useractivityservice.pojo.AuthBean;
-import com.captr.useractivityservice.pojo.interfaces.Activity;
+import com.captr.useractivityservice.pojo.interfaces.IActivity;
 import com.captr.useractivityservice.repository.IActivityLogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
@@ -22,8 +22,8 @@ public class ActivityService {
     @Autowired
     private IActivityLogRepository iActivityLogRepository;
 
-    public List<Activity> getActivitiesByUserId(ActivityRequest request) {
-        return iActivityLogRepository.getFirstByUserFkOrderByActivityTime(authBean.getUserId(),
+    public List<IActivity> getActivitiesByUserId(ActivityRequest request) {
+        return iActivityLogRepository.getFirstByUserEmailOrderByActivityTime(authBean.getPrincipal(),
                 Pageable.ofSize(request.getPageSize()).withPage(request.getPageIndex()));
 
     }

@@ -11,6 +11,6 @@ import java.io.Serializable;
 public class ActivityLog implements Serializable {
     private String activityType;
     private String description;
-    private Long userId;
+    private String emailAddress;
     private String requestTime;
 }

@@ -1,7 +1,7 @@
 package com.captr.useractivityservice.controller;
 
 import com.captr.useractivityservice.pojo.ActivityRequest;
-import com.captr.useractivityservice.pojo.interfaces.Activity;
+import com.captr.useractivityservice.pojo.interfaces.IActivity;
 import com.captr.useractivityservice.service.ActivityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,7 +22,7 @@ public class ActivityController {
 
     @PostMapping
     @RequestMapping("/recent")
-    public List<Activity> getActivities(ActivityRequest request) {
+    public List<IActivity> getActivities(ActivityRequest request) {
         return activityService.getActivitiesByUserId( request);
     }
 }
